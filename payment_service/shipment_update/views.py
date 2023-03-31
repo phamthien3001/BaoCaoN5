@@ -21,7 +21,7 @@ def shipment_details_update(uname):
     url = 'http://127.0.0.1:8000/userinfo/'
     d1 = {}
     d1["User Name"] = data['username']
-    data = json.dumps(d1)
+    data = json.dumps(d1) 
     headers = {'Content-Type': 'application/json'}
     response = requests.post(url, data=data, headers=headers)
     val1 = json.loads(response.content.decode('utf-8'))
@@ -36,3 +36,4 @@ def shipment_details_update(uname):
     response = requests.post(url, data=data, headers=headers)
     api_resp = json.loads(response.content.decode('utf-8'))
     return api_resp
+    
